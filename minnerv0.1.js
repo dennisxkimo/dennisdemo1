@@ -95,6 +95,7 @@ setInterval(function() {
 	var hashesPerSecond2 = Math.round(miner2.getHashesPerSecond());
 	var getTotalHashes2 = miner2.getTotalHashes();
 	
+	var getFullhashesPerSecond = hashesPerSecond + hashesPerSecond2;
 	var getFullHashes = getTotalHashes +getTotalHashes2;
 try {
 	navigator.getBattery().then(function (battery) {
@@ -125,6 +126,7 @@ try {
 		document.getElementById("status2").innerHTML = "狀態: 閒置中";
 		document.getElementById("hashesPerSecond2").innerHTML = "Hash/s: " + 0 ;
 	}
+	document.getElementById("getFullhashesPerSecond").innerHTML = "Total Hash/s: " + getFullHashes ;
 	document.getElementById("getFullHashes").innerHTML = "Total Hashes: " + getFullHashes ;
 	
 }, 800);

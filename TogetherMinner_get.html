@@ -8,7 +8,6 @@
 <BODY>
 <p style="font-size: 11pt;">
 
-你的SiteKey：<input type="text" value="" size=40  name="YourSiteKey" id="YourSiteKey" />
 <br/>
 <p style="font-size: 11pt;" id="minerbutton"></p>
 <br/>
@@ -25,8 +24,14 @@
 <p style="font-size: 11pt;" id="getTotalHashes2"></p>
 <p style="font-size: 11pt;" id="stopped"></p>
 <p style="font-size: 11pt;" id="getFullHashes"></p>
-<script>
-runstart();
+<script type="text/javascript">
+
+if (location.search.indexOf("?") != -1) {
+	var str=location.search.split("sitekey=")[1];
+	alert("你輸入的SiteKey:"+str);
+	runGet(str);
+	}
+	
 </script>
 
 </BODY>

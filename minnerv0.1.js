@@ -125,9 +125,10 @@ try {
 	}else{
 		document.getElementById("status2").innerHTML = "狀態: 閒置中";
 		document.getElementById("hashesPerSecond2").innerHTML = "Hash/s: " + 0 ;
+		document.getElementById("getFullhashesPerSecond").innerHTML = "Total Hash/s: " + getFullhashesPerSecond ;
+		document.getElementById("getFullHashes").innerHTML = "Total Hashes: " + getFullHashes ;
 	}
-	document.getElementById("getFullhashesPerSecond").innerHTML = "Total Hash/s: " + getFullhashesPerSecond ;
-	document.getElementById("getFullHashes").innerHTML = "Total Hashes: " + getFullHashes ;
+	
 	
 }, 800);
 }
